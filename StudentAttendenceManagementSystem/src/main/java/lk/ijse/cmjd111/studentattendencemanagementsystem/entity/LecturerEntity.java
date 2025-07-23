@@ -1,6 +1,6 @@
-package lk.ijse.cmjd111.studentattendencemanagementsystem.dto;
+package lk.ijse.cmjd111.studentattendencemanagementsystem.entity;
 
-public class LectureDto {
+public class LecturerEntity {
 
     private String id;
     private String name;
@@ -8,10 +8,10 @@ public class LectureDto {
     private String address;
     private String course;
 
-    public LectureDto() {
+    public LecturerEntity() {
     }
 
-    public LectureDto(String id, String name, String dob, String address, String course) {
+    public LecturerEntity(String id, String name, String dob, String address, String course) {
         this.id = id;
         this.name = name;
         this.dob = dob;
@@ -92,6 +92,7 @@ public class LectureDto {
 
     @Override
     public String toString() {
-        return "LectureDto{" + "id=" + id + ", name=" + name + ", dob=" + dob + ", address=" + address + ", course=" + course + '}';
+        return "LecturerEntity{" + "id=" + id + ", name=" + name + ", dob=" + dob + ", address=" + address + ", course=" + course + '}';
     }
 }
+
