@@ -10,8 +10,8 @@ public class CourseDetailImpl implements CourseDetailDao{
 
     @Override
     public boolean save(CourseDetailEntity t) throws Exception {
-        return CrudUtil.executeUpdate("INSERT INTO Coursedetail VALUES(?,?,?)",
-                t.getCourseId(), t.getCourse(), t.getLecName());
+        return CrudUtil.executeUpdate("INSERT INTO Coursedetail VALUES(?,?)",
+                t.getCourse(), t.getLecName());
     }
 
     @Override

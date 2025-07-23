@@ -1,6 +1,5 @@
 package lk.ijse.cmjd111.studentattendencemanagementsystem.controller;
 
-import lk.ijse.cmjd111.studentattendencemanagementsystem.dto.StudentDto;
 import lk.ijse.cmjd111.studentattendencemanagementsystem.service.ServiceFactory;
 import lk.ijse.cmjd111.studentattendencemanagementsystem.service.custom.StudentService;
 import java.util.ArrayList;
