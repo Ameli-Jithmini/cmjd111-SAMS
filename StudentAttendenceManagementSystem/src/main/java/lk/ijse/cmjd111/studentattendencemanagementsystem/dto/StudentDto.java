@@ -2,8 +2,8 @@ package lk.ijse.cmjd111.studentattendencemanagementsystem.dto;
 
 public class StudentDto {
 
-    private String id;
-    private String name;
+    private String stId;
+    private String stName;
     private String dob;
     private String address;
     private String course;
@@ -11,9 +11,9 @@ public class StudentDto {
     public StudentDto() {
     }
 
-    public StudentDto(String id, String name, String dob, String address, String course) {
-        this.id = id;
-        this.name = name;
+    public StudentDto(String stId, String stName, String dob, String address, String course) {
+        this.stId = stId;
+        this.stName = stName;
         this.dob = dob;
         this.address = address;
         this.course = course;
@@ -22,29 +22,29 @@ public class StudentDto {
     /**
      * @return the id
      */
-    public String getId() {
-        return id;
+    public String getStId() {
+        return stId;
     }
 
     /**
-     * @param id the id to set
+     * @param stId the id to set
      */
-    public void setId(String id) {
-        this.id = id;
+    public void setStId(String stId) {
+        this.stId = stId;
     }
 
     /**
      * @return the name
      */
-    public String getName() {
-        return name;
+    public String getStName() {
+        return stName;
     }
 
     /**
-     * @param name the name to set
+     * @param stName the name to set
      */
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String stName) {
+        this.stName = stName;
     }
 
     /**
@@ -92,6 +92,6 @@ public class StudentDto {
 
     @Override
     public String toString() {
-        return "StudentDto{" + "id=" + id + ", name=" + name + ", dob=" + dob + ", address=" + address + ", course=" + course + '}';
+        return "StudentDto{" + "id=" + stId + ", name=" + stName + ", dob=" + dob + ", address=" + address + ", course=" + course + '}';
     }
 }

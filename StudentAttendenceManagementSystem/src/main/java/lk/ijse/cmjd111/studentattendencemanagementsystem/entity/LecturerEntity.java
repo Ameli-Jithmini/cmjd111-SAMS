@@ -2,8 +2,8 @@ package lk.ijse.cmjd111.studentattendencemanagementsystem.entity;
 
 public class LecturerEntity {
 
-    private String id;
-    private String name;
+    private String lecId;
+    private String lecName;
     private String dob;
     private String address;
     private String course;
@@ -11,9 +11,9 @@ public class LecturerEntity {
     public LecturerEntity() {
     }
 
-    public LecturerEntity(String id, String name, String dob, String address, String course) {
-        this.id = id;
-        this.name = name;
+    public LecturerEntity(String lecId, String lecName, String dob, String address, String course) {
+        this.lecId = lecId;
+        this.lecName = lecName;
         this.dob = dob;
         this.address = address;
         this.course = course;
@@ -22,29 +22,29 @@ public class LecturerEntity {
     /**
      * @return the id
      */
-    public String getId() {
-        return id;
+    public String getLecId() {
+        return lecId;
     }
 
     /**
-     * @param id the id to set
+     * @param lecId the id to set
      */
-    public void setId(String id) {
-        this.id = id;
+    public void setLecId(String lecId) {
+        this.lecId = lecId;
     }
 
     /**
      * @return the name
      */
-    public String getName() {
-        return name;
+    public String getLecName() {
+        return lecName;
     }
 
     /**
-     * @param name the name to set
+     * @param lecName the name to set
      */
-    public void setName(String name) {
-        this.name = name;
+    public void setLecName(String lecName) {
+        this.lecName = lecName;
     }
 
     /**
@@ -92,7 +92,7 @@ public class LecturerEntity {
 
     @Override
     public String toString() {
-        return "LecturerEntity{" + "id=" + id + ", name=" + name + ", dob=" + dob + ", address=" + address + ", course=" + course + '}';
+        return "LecturerEntity{" + "id=" + lecId + ", name=" + lecName + ", dob=" + dob + ", address=" + address + ", course=" + course + '}';
     }
 }
 

@@ -1,24 +1,26 @@
 package lk.ijse.cmjd111.studentattendencemanagementsystem.service;
 
-import lk.ijse.cmjd111.studentattendencemanagementsystem.service.custom.impl.CustomerServiceImpl;
-import lk.ijse.cmjd111.studentattendencemanagementsystem.service.custom.impl.ItemServiceImpl;
-import lk.ijse.cmjd111.studentattendencemanagementsystem.service.custom.impl.OrderServiceImpl;
-
+import lk.ijse.cmjd111.studentattendencemanagementsystem.service.custom.impl.StudentServiceImpl;
+import lk.ijse.cmjd111.studentattendencemanagementsystem.service.custom.impl.LecturerServiceImpl;
+import lk.ijse.cmjd111.studentattendencemanagementsystem.service.custom.impl.CourseServiceImpl;
+import lk.ijse.cmjd111.studentattendencemanagementsystem.service.custom.impl.UserServiceImpl;
+import lk.ijse.cmjd111.studentattendencemanagementsystem.service.custom.UserService;
 
 public class ServiceFactory {
+
     private static ServiceFactory serviceFactory;
 
     private ServiceFactory() {
     }
 
-    public static ServiceFactory getInstance(){
-        if(serviceFactory == null){
+    public static ServiceFactory getInstance() {
+        if (serviceFactory == null) {
             serviceFactory = new ServiceFactory();
         }
         return serviceFactory;
     }
 
-    public SuperService getService(ServiceTypes type){
+    public SuperService getService(ServiceTypes type) {
         switch (type) {
             case STUDENT:
                 return new StudentServiceImpl();
@@ -26,12 +28,14 @@ public class ServiceFactory {
                 return new LecturerServiceImpl();
             case COURSE:
                 return new CourseServiceImpl();
+            case USER:
+                return new UserServiceImpl();
             default:
-                throw new AssertionError();
+                throw new AssertionError("Unknown service type: " + type);
         }
     }
 
-    public enum ServiceTypes{
-        STUDENT, LECTURER, COURSE
+    public enum ServiceTypes {
+        STUDENT, LECTURER, COURSE, USER
     }
 }

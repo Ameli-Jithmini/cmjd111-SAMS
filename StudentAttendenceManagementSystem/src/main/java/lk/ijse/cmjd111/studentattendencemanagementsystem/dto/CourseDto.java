@@ -70,7 +70,7 @@ public class CourseDto {
     }
 
     /**
-     * @param courseDetailDtos the courseDetailDtos to set
+     * @param CourseDetailDtos the courseDetailDtos to set
      */
     public void setCourseDetailDtos(ArrayList<CourseDetailDto> CourseDetailDtos) {
         this.courseDetailDtos = courseDetailDtos;

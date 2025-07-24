@@ -1,9 +1,11 @@
 package lk.ijse.cmjd111.studentattendencemanagementsystem.dao;
 
 import lk.ijse.cmjd111.studentattendencemanagementsystem.dao.custom.impl.StudentDaoImpl;
-import lk.ijse.cmjd111.studentattendencemanagementsystem.custom.impl.CourseDaoImpl;
+import lk.ijse.cmjd111.studentattendencemanagementsystem.dao.custom.impl.CourseDaoImpl;
 import lk.ijse.cmjd111.studentattendencemanagementsystem.dao.custom.impl.LecturerDaoImpl;
 import lk.ijse.cmjd111.studentattendencemanagementsystem.dao.custom.impl.CourseDetailImpl;
+import lk.ijse.cmjd111.studentattendencemanagementsystem.dao.custom.impl.UserDaoImpl;
+
 
 
 public class DaoFactory {
@@ -29,13 +31,15 @@ public class DaoFactory {
                 return new CourseDaoImpl();
             case COURSE_DETAIL:
                 return new CourseDetailImpl();
+            case USER:
+                return new UserDaoImpl();
             default:
                 return null;
         }
     }
 
     public enum DaoTypes{
-        STUDENT, LECTURER, COURSE, COURSE_DETAIL
+        STUDENT, LECTURER, COURSE, COURSE_DETAIL, USER
     }
 
 }
